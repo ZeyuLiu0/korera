@@ -43,6 +43,11 @@ public class ProjectController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+//    @PutMapping("/add/{id}")
+//    public ResponseEntity<?> addProjectToUserById(@RequestBody Project project, @PathVariable Integer id){
+//
+//    }
+
     @PutMapping("/update")
     public ResponseEntity<?> updateProject(@Valid @RequestBody Project project, BindingResult bindingResult) throws Exception {
         if(bindingResult.hasErrors()){
